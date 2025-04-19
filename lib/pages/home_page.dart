@@ -9,30 +9,23 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
- NotificationService notificationService =NotificationService();
- 
-@override
+  final NotificationService notificationService = NotificationService();
+
+  @override
   void initState() {
-  
     super.initState();
     notificationService.requestNotificationPermission();
-    notificationService.firebaseInit();
+    notificationService.firebaseInit(context);
     notificationService.isTokenRefresh();
-    notificationService.getDeviceToken().then((value){
-     print('device token');
-     print(value);
-    });
-
+    notificationService.getDeviceToken();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Izaz Ahmed'),
-      ),
+      appBar: AppBar(title: const Text('Izaz')),
       body: const Center(
-        child: Text('Firebase Notification Demo'),
+        child: Text('Hey Izaz 👋'),
       ),
     );
   }

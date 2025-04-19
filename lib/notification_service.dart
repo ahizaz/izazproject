@@ -35,7 +35,7 @@ class NotificationService {
  AndroidNotificationDetails androidNotificationDetails = AndroidNotificationDetails(  
       channel.id.toString(),
       channel.name.toString() ,
-      channelDescription: 'your channel description',
+      channelDescription: 'your channel description sssss',
       importance: Importance.high,
       priority: Priority.high ,
       playSound: true,
